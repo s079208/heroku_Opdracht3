@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const PORT = process.env.PORT || 5000;
+const port = 5000;
 const blogposts = require('./data/portfolio.json');
 
 
@@ -41,6 +41,6 @@ app.use(function(request, response){
 
 app.set('port', ());
 // app luisteren naar applicatiepoort
-app.listen(PORT, function () {
-  console.log("het werkt");
-});
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
