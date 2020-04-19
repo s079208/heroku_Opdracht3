@@ -41,6 +41,4 @@ app.use(function(request, response){
 
 app.set('port', (process.env.PORT || 5000));
 // app luisteren naar applicatiepoort
-app.listen(app.get('port'),function () {
-  console.log("luisterd op poort:" + port);
-});
+app.listen(app.get('port'));
